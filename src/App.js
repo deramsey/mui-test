@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import * as r from 'react';
+import '@fontsource/roboto/500.css';
+import "./App.css"
+import {Button, Container, Avatar} from "@mui/material";
+import {indigo} from "@mui/material/colors";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(){
+  return(
+    <div>
+      <Container className="container" maxWidth="sm">
+      <Avatar className="av" sx={{bgcolor: indigo[900]}}>DR</Avatar>
+      <Button sx={{bgcolor:indigo[500]}} size="large" className="center" variant="contained" onClick={()=>{alert("Hello World!")}}>Hello world!</Button>
+      </Container>
     </div>
-  );
+  )
 }
 
 export default App;
